@@ -45,12 +45,3 @@ flowchart LR
 ## 구현·검증 범위
 
 이 사례는 별도 개선 구현과 격리 환경 시험을 다룹니다. 확인한 공개 백엔드 기본 브랜치 커밋에는 동일 ID 재시도 구현이 포함되어 있지 않으므로, 운영 배포 완료와 구분합니다. 기존 [예약·시스템 메시지의 커밋 후 발행](01-reservation-consistency.md)은 공개 백엔드 코드로 별도 확인할 수 있습니다.
-
-## 원자료
-
-아래 사례 저장소는 비공개이며 접근 권한이 필요합니다. 커밋 `51aa415`의 README·구현·시험 기록을 대조했습니다. 원본 코드나 로그를 이 저장소에 복사하지 않았습니다.
-
-- [메시지 전송 신뢰성 설명](https://github.com/seobeeeee1001/snapbook-chat-case-study/blob/51aa415f0936a844e70536155cd3c011f6a2461c/README.md)
-- [종료 시점별 시험 기록](https://github.com/seobeeeee1001/snapbook-chat-case-study/blob/51aa415f0936a844e70536155cd3c011f6a2461c/evidence/delivery-recovery.json)
-- [서버의 동일 ID 처리](https://github.com/seobeeeee1001/snapbook-chat-case-study/blob/51aa415f0936a844e70536155cd3c011f6a2461c/reliability/backend/MessageWriter.java)
-- [클라이언트의 상태 전환](https://github.com/seobeeeee1001/snapbook-chat-case-study/blob/51aa415f0936a844e70536155cd3c011f6a2461c/reliability/frontend/useOptimisticMessage.js), [재접속 후 이력 복구](https://github.com/seobeeeee1001/snapbook-chat-case-study/blob/51aa415f0936a844e70536155cd3c011f6a2461c/reliability/frontend/recoverChatMessages.js)

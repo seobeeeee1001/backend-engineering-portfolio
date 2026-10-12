@@ -37,7 +37,3 @@
 | [계정별 진도 동기화](cases/03-progress-sync.md) | 변경 UUID·처리 기록·행 잠금으로 중복 전송과 동시 수정 처리 |
 | [SQL 집계 개선](cases/04-sql-aggregation.md) | 결합 방식을 바꾸면서 고유 인원 집계 의미 유지; 합성 데이터 측정 조건 명시 |
 | [LLM 분석의 작업 복구](https://github.com/seobeeeee1001/llm-study-analysis-case-study) | 작업 상태와 학습 구성을 저장하고, 검증·저장된 주제부터 공개 |
-
----
-
-[근거 및 검증 범위](evidence.md) — 사례별 구현·시험 환경을 구분했습니다. 메시지 복구 사례 원본과 한능검 PR은 접근 권한이 필요하며, 설계와 검증 조건은 이 저장소에서 읽을 수 있습니다.

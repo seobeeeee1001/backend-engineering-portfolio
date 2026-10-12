@@ -29,9 +29,9 @@ flowchart LR
 
 커밋 이후 발행은 DB 롤백과 화면 반영의 순서를 정합니다. 커밋 직후 프로세스가 종료되는 구간까지 자동 재전송을 보장하는 구조는 아닙니다. 실시간 발행이 실패해도 저장된 메시지는 이력 조회의 근거로 남습니다.
 
-## 검증 근거
+## 검증 조건
 
-공개 통합 테스트에 다음 조건이 구현되어 있습니다. 이 문서를 작성하면서 코드를 대조했으며 테스트를 새로 실행한 결과는 아닙니다.
+통합 테스트의 확인 조건은 다음과 같습니다.
 
 | 조건 | 테스트의 확인 내용 |
 | --- | --- |
@@ -39,11 +39,3 @@ flowchart LR
 | 시스템 메시지 저장 중 예외 | 예약도 롤백하고 발행하지 않음 |
 | WebSocket 발행 중 예외 | 예약과 시스템 메시지는 DB에 유지 |
 | 메시지 이력 재조회 | 시스템 메시지와 발신자 정보 유지 |
-
-## 공개 원자료
-
-아래 링크는 확인한 커밋 `58456c9`에 고정했습니다.
-
-- [예약 메뉴 스냅샷](https://github.com/WAP-SNAPBOOK/BE/blob/58456c930aad5eb3ef215937bac96ededd7b1f18/src/main/java/com/example/easybooking/reservation/domain/ReservationMenuItem.java), [예약의 소요시간](https://github.com/WAP-SNAPBOOK/BE/blob/58456c930aad5eb3ef215937bac96ededd7b1f18/src/main/java/com/example/easybooking/reservation/domain/Reservation.java)
-- [메시지 저장 리스너](https://github.com/WAP-SNAPBOOK/BE/blob/58456c930aad5eb3ef215937bac96ededd7b1f18/src/main/java/com/example/easybooking/reservation/event/ReservationChatEventListener.java), [커밋 후 발행 리스너](https://github.com/WAP-SNAPBOOK/BE/blob/58456c930aad5eb3ef215937bac96ededd7b1f18/src/main/java/com/example/easybooking/reservation/event/ReservationChatPublishListener.java)
-- [전달·발행 실패 통합 테스트](https://github.com/WAP-SNAPBOOK/BE/blob/58456c930aad5eb3ef215937bac96ededd7b1f18/src/test/java/com/example/easybooking/ReservationMessageDeliveryIntegrationTest.java), [저장 실패 롤백 통합 테스트](https://github.com/WAP-SNAPBOOK/BE/blob/58456c930aad5eb3ef215937bac96ededd7b1f18/src/test/java/com/example/easybooking/ReservationMessageRollbackIntegrationTest.java)
