@@ -1,6 +1,6 @@
 # 원지섭 | Backend Developer
 
-메시지 전송과 결제처럼 사용자에게 결과가 정확히 전달되어야 하는 기능을 개발합니다.
+메시지 전송과 결제처럼 사용자에게 결과가 정확히 전달되어야 하는 기능을 안정적으로 설계하였습니다.
 처리 단계별 실패 가능성을 나누고, 완료 기준과 재시도·복구 규칙을 설계했습니다.
 
 [GitHub](https://github.com/seobeeeee1001) · [SnapBook 백엔드](https://github.com/WAP-SNAPBOOK/BE) · [백지복습](https://blank-recall.site/)
